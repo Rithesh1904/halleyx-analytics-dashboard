@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# HalleyX Analytics Dashboard
 
-# Run and deploy your AI Studio app
+## Description
+This is an analytics dashboard application with a React frontend and an Express.js backend.
 
-This contains everything you need to run your app locally.
+## Setup Instructions
 
-View your app in AI Studio: https://ai.studio/apps/37f0e718-64c6-4d6f-8bbb-4ee848ee755c
+### Prerequisites
+- Node.js (v20 or higher recommended)
+- PostgreSQL database
 
-## Run Locally
+### .env Configuration
+Create a `.env` file in the root directory with the following variables:
 
-**Prerequisites:**  Node.js
+```
+DATABASE_URL="postgresql://user:password@host:port/database"
+API_KEY="your_api_key_here"
+DISABLE_HMR="true"
+```
 
+Replace the placeholder values with your actual database URL and API key.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Install Dependencies
+Navigate to the root directory of the project and run:
+```bash
+npm install
+```
+
+## How to Run the Application
+
+### Development Mode
+To run the application in development mode (both frontend and backend):
+
+```bash
+npm run dev
+```
+
+This will start the backend server and the frontend development server. The application should be accessible at `http://localhost:3006` (or the port specified in `backend/server.ts`).
+
+### Build and Preview (Production-like)
+To build the frontend for production and preview it:
+
+```bash
+npm run build
+npm run preview
+```
+
+### Linting
+To lint the frontend code:
+```bash
+npm run lint
+```
